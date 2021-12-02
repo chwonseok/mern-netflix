@@ -15,7 +15,6 @@ const Nav = () => {
 
   window.onscroll = () => {
     setIsScrolled(window.scrollY === 0 ? false : true);
-
     // cleanup function
     return () => (window.onscroll = null);
   };
@@ -47,7 +46,7 @@ const Nav = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
             alt="user-icon"
           />
-          {dropdown ? <DropdownMenu /> : ''}
+          {dropdown && <DropdownMenu />}
           <ArrowDropDown onClick={handleDropdownMenu} />
         </NavRight>
       </NavContainer>
