@@ -10,7 +10,7 @@ const Home = () => {
     <ThemeProvider theme={theme}>
       <Reset />
       <Nav />
-      <Featured />
+      <Featured type={'영화'} />
     </ThemeProvider>
   );
 };

@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
 
-  color: ${({ theme }) => theme.colors.letter};
+  color: ${({ theme }) => theme.colors.text};
   font-size: 14px;
 
   padding: 20px 50px;
