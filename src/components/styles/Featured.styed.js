@@ -10,6 +10,27 @@ export const Category = styled.div`
   top: 80px;
   left: 50px;
   color: ${({ theme }) => theme.colors.text};
+  ${({ theme }) => theme.common.flexCenter}
+
+  span {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  select {
+    background: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.text};
+    border: 1px solid #fff;
+    z-index: 1;
+
+    margin-left: 2.5rem;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+    }
+  }
 `;
 
 export const FeaturedImg = styled.img`
@@ -21,7 +42,7 @@ export const FeaturedImg = styled.img`
 export const FeaturedInfo = styled.div`
   position: absolute;
   width: 35%;
-  bottom: 200px;
+  bottom: 24%;
   left: 50px;
   color: ${({ theme }) => theme.colors.text};
 

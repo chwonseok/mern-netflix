@@ -1,9 +1,10 @@
 import React from 'react';
 import Nav from '../../components/Nav';
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../../components/styles/Theme';
-import { Reset } from 'styled-reset';
 import Featured from '../../components/Featured';
+import List from '../../components/List';
+import { ThemeProvider } from 'styled-components';
+import { Reset } from 'styled-reset';
+import { theme } from '../../components/styles/Theme';
 
 const Home = () => {
   return (
@@ -11,6 +12,9 @@ const Home = () => {
       <Reset />
       <Nav />
       <Featured type={'영화'} />
+      <List />
+      <List />
+      <List />
     </ThemeProvider>
   );
 };

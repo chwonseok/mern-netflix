@@ -15,8 +15,8 @@ const Featured = ({ type }) => {
         <Category>
           <span>{type === '영화' ? '영화' : 'TV 프로그램'}</span>
           <select name="genre" id="genre">
-            <option>Genre</option>
-            <option value="adventure">Adventure</option>
+            <option>장르</option>
+            <option value="어드벤쳐">어드벤쳐</option>
             <option value="comedy">코미디</option>
             <option value="crime">범죄</option>
             <option value="fantasy">판타지</option>
