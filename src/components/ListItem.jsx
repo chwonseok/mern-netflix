@@ -4,14 +4,14 @@ import {
   ThumbDownOutlined,
   ThumbUpAltOutlined,
 } from '@material-ui/icons';
-import { useState } from 'react';
 import {
+  Hovered,
   ItemImg,
-  PreviewModal,
+  ItemInfo,
   StyledListItem,
   Trailer,
-  TrailerInfo,
 } from './styles/ListItem.styled';
+import { useState } from 'react';
 
 const ListItem = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,19 +20,15 @@ const ListItem = () => {
 
   return (
     <StyledListItem
-      onClick={() => {
-        setIsHovered(!isHovered);
-      }}
-      // onMouseLeave={() => {
-      //   setIsHovered(false);
-      // }}
+      onClick={() => setIsHovered(!isHovered)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
     >
       <ItemImg src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/22cc4f414242a5124d729a21845cc341955b338b72fa98da3ca71c49510a371b._RI_.jpg" />
-
       {isHovered && (
-        <PreviewModal>
+        <Hovered>
           <Trailer src={trailer} autoPlay={true} loop />
-          <TrailerInfo>
+          <ItemInfo>
             <div className="icons">
               <PlayArrow className="icon" />
               <Add className="icon" />
@@ -49,8 +45,8 @@ const ListItem = () => {
               Praesentium hic rem eveniet error possimus, neque ex doloribus.
             </div>
             <div className="genre">Action</div>
-          </TrailerInfo>
-        </PreviewModal>
+          </ItemInfo>
+        </Hovered>
       )}
     </StyledListItem>
   );
