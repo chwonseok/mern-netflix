@@ -5,7 +5,8 @@ import {
   ThumbUpAltOutlined,
 } from '@material-ui/icons';
 import {
-  Hovered,
+  HoveredItem,
+  Icons,
   ItemImg,
   ItemInfo,
   StyledListItem,
@@ -26,15 +27,15 @@ const ListItem = () => {
     >
       <ItemImg src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/22cc4f414242a5124d729a21845cc341955b338b72fa98da3ca71c49510a371b._RI_.jpg" />
       {isHovered && (
-        <Hovered>
+        <HoveredItem>
           <Trailer src={trailer} autoPlay={true} loop />
           <ItemInfo>
-            <div className="icons">
+            <Icons>
               <PlayArrow className="icon" />
               <Add className="icon" />
               <ThumbUpAltOutlined className="icon" />
               <ThumbDownOutlined className="icon" />
-            </div>
+            </Icons>
             <div className="itemInfoTop">
               <span>1 hour 14 mins</span>
               <span className="limit">+16</span>
@@ -46,7 +47,7 @@ const ListItem = () => {
             </div>
             <div className="genre">Action</div>
           </ItemInfo>
-        </Hovered>
+        </HoveredItem>
       )}
     </StyledListItem>
   );
