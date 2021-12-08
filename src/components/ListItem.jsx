@@ -9,6 +9,7 @@ import {
   Icons,
   ItemImg,
   ItemInfo,
+  ItemInfoHeader,
   StyledListItem,
   Trailer,
 } from './styles/ListItem.styled';
@@ -21,9 +22,9 @@ const ListItem = () => {
 
   return (
     <StyledListItem
-      onClick={() => setIsHovered(!isHovered)}
-      // onMouseEnter={() => setIsHovered(true)}
-      // onMouseLeave={() => setIsHovered(false)}
+      // onClick={() => setIsHovered(!isHovered)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <ItemImg src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/22cc4f414242a5124d729a21845cc341955b338b72fa98da3ca71c49510a371b._RI_.jpg" />
       {isHovered && (
@@ -31,16 +32,17 @@ const ListItem = () => {
           <Trailer src={trailer} autoPlay={true} loop />
           <ItemInfo>
             <Icons>
-              <PlayArrow className="icon" />
-              <Add className="icon" />
-              <ThumbUpAltOutlined className="icon" />
-              <ThumbDownOutlined className="icon" />
+              <PlayArrow />
+              <Add />
+              <ThumbUpAltOutlined />
+              <ThumbDownOutlined />
             </Icons>
-            <div className="itemInfoTop">
-              <span>1 hour 14 mins</span>
-              <span className="limit">+16</span>
-              <span>1999</span>
-            </div>
+            <ItemInfoHeader>
+              <p>1 hour 14 mins</p>
+              <p>+15</p>
+              <p>1999</p>
+              <p>HD</p>
+            </ItemInfoHeader>
             <div className="desc">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Praesentium hic rem eveniet error possimus, neque ex doloribus.
