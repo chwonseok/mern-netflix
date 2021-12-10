@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const StyledList = styled.div`
   width: 100%;
-  margin-top: 10px;
+  margin: 20px 0;
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
     margin-left: 50px;

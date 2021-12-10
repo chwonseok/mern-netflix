@@ -26,6 +26,10 @@ export const NavLeft = styled.div`
   span {
     margin: 0 0.6rem;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 
