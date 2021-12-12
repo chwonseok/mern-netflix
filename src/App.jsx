@@ -1,9 +1,17 @@
-import Home from './pages/home/Home';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './components/styles/Theme.js';
+import { Reset } from 'styled-reset';
+// import Home from './pages/home/Home';
+// import Watch from './pages/watch/Watch';
 import Register from './pages/register/Register';
-import Watch from './pages/watch/Watch';
 
 const App = () => {
-  return <Register />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Reset />
+      <Register />
+    </ThemeProvider>
+  );
 };
 
 export default App;

@@ -2,14 +2,14 @@ export const theme = {
   common: {
     flexCenter: `
       display: flex;
-      justify-contents: center;
+      justify-content: center;
       align-items: center;
     `,
 
     flexCenterCol: `
       display: flex;
       flex-direction: column;
-      justify-contents: center;
+      justify-content: center;
       align-items: center;
     `,
   },

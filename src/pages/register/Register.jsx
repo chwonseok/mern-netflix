@@ -1,19 +1,33 @@
 import {
+  InputEmail,
   LoginBtn,
   Logo,
+  RegisterContainer,
+  RegisterTop,
   StyledRegister,
 } from '../../components/styles/Register.styled';
 
 const Register = () => {
   return (
     <StyledRegister>
-      <div>
+      <RegisterTop>
         <Logo
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
           alt="home-logo"
         />
         <LoginBtn>Sign In</LoginBtn>
-      </div>
+      </RegisterTop>
+      <RegisterContainer>
+        <h1>Unlimited movies, TV shows, and more.</h1>
+        <h2>Watch anywhere. Cancel anytime.</h2>
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <InputEmail>
+          <input type="text" placeholder="email address" />
+          <button>Get Started</button>
+        </InputEmail>
+      </RegisterContainer>
     </StyledRegister>
   );
 };
