@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import {
   InputEmail,
   LoginBtn,
@@ -8,6 +9,19 @@ import {
 } from '../../components/styles/Register.styled';
 
 const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  const handleEmail = () => {
+    setEmail(emailRef.current.value);
+  };
+  const handleStart = () => {
+    setPassword(passwordRef.current.value);
+  };
+
   return (
     <StyledRegister>
       <RegisterTop>
@@ -23,10 +37,17 @@ const Register = () => {
         <p>
           Ready to watch? Enter your email to create or restart your membership.
         </p>
-        <InputEmail>
-          <input type="text" placeholder="email address" />
-          <button>Get Started</button>
-        </InputEmail>
+        {!email ? (
+          <InputEmail>
+            <input type="text" placeholder="email address" ref={emailRef} />
+            <button onClick={handleEmail}>Get Started</button>
+          </InputEmail>
+        ) : (
+          <InputEmail>
+            <input type="password" placeholder="password" ref={passwordRef} />
+            <button onClick={handleStart}>Start</button>
+          </InputEmail>
+        )}
       </RegisterContainer>
     </StyledRegister>
   );
