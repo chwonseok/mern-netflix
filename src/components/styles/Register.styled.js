@@ -52,19 +52,23 @@ export const RegisterContainer = styled.section`
   color: white;
 
   h1 {
-    font-size: 50px;
+    font-size: 3.2rem;
+    font-weight: 600;
   }
 
   h2 {
-    margin: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 `;
 
-export const InputEmail = styled.div`
+export const InputWrap = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
@@ -72,26 +76,44 @@ export const InputEmail = styled.div`
   margin-top: 20px;
   height: 50px;
   border-radius: 5px;
+`;
 
-  input {
-    flex: 7;
-    padding: 0 15px;
-    height: 100%;
-    font-size: 20px;
-    border: none;
+export const InputEmail = styled.input`
+  flex: 7;
+  padding: 0 15px;
+  height: 100%;
+  font-size: 20px;
+  border: none;
+
+  &:focus {
+    outline: none;
   }
+`;
 
-  button {
-    flex: 3;
-    height: 100%;
-    background-color: red;
-    border: none;
-    color: #fff;
-    font-size: 22px;
-    cursor: pointer;
+export const InputPassword = styled.input`
+  flex: 7;
+  padding: 0 15px;
+  height: 100%;
+  font-size: 20px;
+  border: none;
 
-    &:hover {
-      opacity: 0.8;
-    }
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const RegisterBtn = styled.button`
+  flex: 3;
+  height: 100%;
+  padding: 0 15px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
   }
 `;

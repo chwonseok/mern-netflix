@@ -1,8 +1,11 @@
 import { useRef, useState } from 'react';
 import {
   InputEmail,
+  InputPassword,
+  InputWrap,
   LoginBtn,
   Logo,
+  RegisterBtn,
   RegisterContainer,
   RegisterTop,
   StyledRegister,
@@ -29,24 +32,35 @@ const Register = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
           alt="home-logo"
         />
-        <LoginBtn>Sign In</LoginBtn>
+        <LoginBtn>로그인</LoginBtn>
       </RegisterTop>
       <RegisterContainer>
-        <h1>Unlimited movies, TV shows, and more.</h1>
-        <h2>Watch anywhere. Cancel anytime.</h2>
+        <h1>영화와 시리즈를 무제한으로.</h1>
+        <h2>다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</h2>
         <p>
-          Ready to watch? Enter your email to create or restart your membership.
+          시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를
+          입력하세요.
         </p>
         {!email ? (
-          <InputEmail>
-            <input type="text" placeholder="email address" ref={emailRef} />
-            <button onClick={handleEmail}>Get Started</button>
-          </InputEmail>
+          <InputWrap>
+            <InputEmail
+              type="email"
+              placeholder="이메일 주소"
+              require="true"
+              ref={emailRef}
+            />
+            <RegisterBtn onClick={handleEmail}>시작하기</RegisterBtn>
+          </InputWrap>
         ) : (
-          <InputEmail>
-            <input type="password" placeholder="password" ref={passwordRef} />
-            <button onClick={handleStart}>Start</button>
-          </InputEmail>
+          <InputWrap>
+            <InputPassword
+              type="password"
+              require="true"
+              placeholder="비밀번호"
+              ref={passwordRef}
+            />
+            <RegisterBtn onClick={handleStart}>Start</RegisterBtn>
+          </InputWrap>
         )}
       </RegisterContainer>
     </StyledRegister>
